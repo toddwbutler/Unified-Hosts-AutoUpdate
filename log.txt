@@ -1,0 +1,39 @@
+Sat 02/22/2025 @ 22:01:40.91: [C:\Scripts\Unified-Hosts-AutoUpdate\Hosts_Update.cmd https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts 3]
+Sat 02/22/2025 @ 22:01:40.91: Initializing...
+Sat 02/22/2025 @ 22:01:40.93: Executing: bitsadmin /list
+
+BITSADMIN version 3.0
+BITS administration utility.
+(C) Copyright Microsoft Corp.
+
+Listed 0 job(s).
+Sat 02/22/2025 @ 22:01:40.95: Executing: powershell $host.version
+
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      26100  2161    
+
+
+Sat 02/22/2025 @ 22:01:41.07: Your current script version is 1.50
+Sat 02/22/2025 @ 22:01:41.09: Checking for script updates...
+Sat 02/22/2025 @ 22:01:41.10: Executing: powershell [Net.ServicePointManager]::SecurityProtocol +='tls12';invoke-webrequest https://raw.githubusercontent.com/ScriptTiger/Unified-Hosts-AutoUpdate/master/VERSION  -outfile 'C:\WINDOWS\TEMP\Unified-Hosts-AutoUpdate\ctemp'
+Sat 02/22/2025 @ 22:01:41.57: Downloaded version successfully
+Sat 02/22/2025 @ 22:01:41.58: Your script is up to date
+Sat 02/22/2025 @ 22:01:41.72: The Unified Hosts has not yet been marked in your local hosts file
+Sat 02/22/2025 @ 22:01:41.74: Executing: attrib -R "C:\WINDOWS\System32\drivers\etc\hosts"
+Sat 02/22/2025 @ 22:01:47.12: Executing: attrib +R "C:\WINDOWS\System32\drivers\etc\hosts"
+Sat 02/22/2025 @ 22:01:47.23: Updating the hosts file...
+Sat 02/22/2025 @ 22:01:47.25: Executing: powershell [Net.ServicePointManager]::SecurityProtocol +='tls12';invoke-webrequest https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts  -outfile 'C:\WINDOWS\TEMP\Unified-Hosts-AutoUpdate\ctemp'
+Sat 02/22/2025 @ 22:01:50.46: Downloaded hosts successfully
+Sat 02/22/2025 @ 22:11:36.15: Executing: attrib -R "C:\WINDOWS\System32\drivers\etc\hosts"
+Sat 02/22/2025 @ 22:11:39.15: Executing: copy "C:\WINDOWS\TEMP\Unified-Hosts-AutoUpdate\hosts" "C:\WINDOWS\System32\drivers\etc\hosts" /y
+        1 file(s) copied.
+Sat 02/22/2025 @ 22:11:42.24: Executing: attrib +R "C:\WINDOWS\System32\drivers\etc\hosts"
+Sat 02/22/2025 @ 22:11:42.48: Your Unified Hosts has been updated
+Sat 02/22/2025 @ 22:11:42.49: Flushing local DNS cache...
+Sat 02/22/2025 @ 22:11:42.50: Executing: ipconfig /flushdns
+
+Windows IP Configuration
+
+Successfully flushed the DNS Resolver Cache.
+Sat 02/22/2025 @ 22:12:00.80: Cleaning temporary files...

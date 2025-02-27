@@ -6,3 +6,10 @@
 # Empty comment lines in this file may also break the script
 # Uncomment the below entry to allow the analytics.google.com domain
 #0.0.0.0 analytics.google.com
+0.0.0.0 cdn-1.convertexperiments.com
+0.0.0.0 cdn-2.convertexperiments.com
+0.0.0.0 cdn-3.convertexperiments.com
+0.0.0.0 cdn-4.convertexperiments.com
+cdn.
+raw.githubusercontent.com
+akamaitechnologies.com
